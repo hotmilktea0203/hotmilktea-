@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCREAMLINE — Full Web Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      background: black;
+      color: white;
+      font-family: 'Space Mono', monospace;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: hotpink;
+      text-decoration: none;
+    }
+    section {
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8vh 10vw;
+      position: relative;
+    }
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+    .scroll-text {
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1vw;
+      opacity: 0.07;
+      color: white;
+      animation: scrollLeft 25s linear infinite;
+      position: absolute;
+      top: 5vh;
+      width: 100%;
+    }
+    @keyframes scrollLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .highlight {
+      color: hotpink;
+      text-shadow: 0 0 15px hotpink;
+    }
+    .button {
+      padding: 1rem 3rem;
+      background: hotpink;
+      color: black;
+      font-weight: bold;
+      font-size: 1.5vw;
+      border-radius: 50px;
+      margin-top: 2rem;
+      box-shadow: 0 0 20px hotpink;
+      transition: transform 0.3s;
+    }
+    .button:hover {
+      transform: scale(1.05);
+      background: white;
+      color: black;
+    }
+    .quote-block {
+      font-size: 2vw;
+      font-style: italic;
+      border-left: 5px solid hotpink;
+      padding-left: 2rem;
+      background: rgba(255,255,255,0.05);
+      max-width: 60vw;
+      color: white;
+      margin: 2rem 0;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 2rem;
+      border: 1px solid hotpink;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px #ff00aa33;
+      font-size: 1.2vw;
+      line-height: 1.6;
+      transform: rotate(-1deg);
+      transition: all 0.3s ease;
+    }
+    .card:nth-child(even) {
+      transform: rotate(1.5deg);
+    }
+    .card:hover {
+      background: hotpink;
+      color: black;
+      transform: scale(1.05);
+    }
+    .app-preview {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .app-preview img {
+      width: 250px;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px hotpink;
+    }
+    .cta-final {
+      text-align: center;
+      margin-top: 10vh;
+    }
+    .cta-final a {
+      font-size: 2vw;
+      padding: 1rem 2.5rem;
+      border: 2px solid hotpink;
+      border-radius: 2rem;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 20px hotpink;
+    }
+    .cta-final a:hover {
+      background: hotpink;
+      color: black;
+    }
+    .slogan {
+      margin-top: 2rem;
+      font-size: 1.4vw;
+      font-style: italic;
+      color: #ff99cc;
+    }
+    .quote-mark {
+      font-size: 14vw;
+      color: rgba(255, 105, 180, 0.07);
+      font-family: 'Orbitron', sans-serif;
+    }
+    .animated-text {
+      font-size: 3vw;
+      font-style: italic;
+      color: white;
+      text-shadow: 0 0 10px hotpink;
+      text-align: center;
+      margin: 2vh 0;
+      animation: fadeInUp 1.4s ease-in-out both;
+    }
+    .pulse {
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.03); }
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.75; }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ INSERTED SECTIONS -->
+
+<!-- ✅ Hero Section -->
+<section style="height: 100vh; background: linear-gradient(145deg, #000000, #1a001a); display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; text-align: center;">
+  <div class="scroll-text">SCREAMLINE SCREAMLINE SCREAMLINE SCREAMLINE SCREAMLINE</div>
+  <h1 class="highlight" style="font-size: 7vw; animation: flicker 2s infinite;">SCREAMLINE</h1>
+  <h2 style="font-size: 2vw; margin-top: 2rem; color: #ccc; max-width: 800px; line-height: 1.6;">
+    Sometimes, you just need to scream.<br>No judgment. No response. Just release.
+  </h2>
+  <a href="tel:123456SCREAM" class="button">CALL NOW</a>
+</section>
+<!-- ✅ What is SCREAMLINE -->
+<section style="background: #0a0a0a; align-items: flex-start;">
+  <div class="scroll-text">screamline: what is it?</div>
+  <h2 class="highlight" style="font-size: 4vw;">Not a hotline.<br>Not therapy.<br>Not someone waiting to fix you.</h2>
+  <p style="font-size: 1.5vw; line-height: 2.2vw; color: #ccc; max-width: 50vw; margin: 3vh 0;">
+    SCREAMLINE is an anonymous scream space. No greetings. No advice. No voices. Just an open line to nowhere — and everywhere.
+  </p>
+  <div class="quote-block">“You call. You scream. You disappear. You survive.”</div>
+</section>
+<!-- ✅ Why People Use It -->
+<section style="background: #0a0a0a;">
+  <h2 class="highlight" style="font-size: 4vw;">Why People Use It</h2>
+  <div class="card-grid">
+    <div class="card">Screamed after a breakup. Fell asleep like a baby.</div>
+    <div class="card">2AM. Car. Full volume. Felt human again.</div>
+    <div class="card">Didn’t know why. Didn’t need to.</div>
+    <div class="card">Not poetic. Not beautiful. Just necessary.</div>
+  </div>
+  <div class="quote-block" style="margin-top: 5vh; text-align: center; max-width: 700px; border: 2px dashed hotpink;">“I screamed. That’s the sentence.”</div>
+  <div style="margin-top: 3vh; font-size: 1.3vw; color: white; opacity: 0.5;">Over <span style="color: hotpink; font-weight: bold; text-shadow: 0 0 10px hotpink; font-size: 1.6vw;">1,000,000</span> screams released — and counting.</div>
+</section>
+<!-- ✅ Who Is It For -->
+<section style="background: #0f0f0f;">
+  <h2 class="highlight" style="font-size: 4vw;">Who Is This For?</h2>
+  <div class="card-grid">
+    <div class="card">The overthinkers</div>
+    <div class="card">The ones who never text back</div>
+    <div class="card">The repressed</div>
+    <div class="card">People who hold it in for too long</div>
+    <div class="card">Those who always say “I’m fine”</div>
+    <div class="card">The quiet ones who scream in silence</div>
+    <div class="card">Those who bottle things… beautifully</div>
+    <div class="card">The ones who laugh while falling apart</div>
+  </div>
+  <div class="highlight pulse" style="margin-top: 8vh; font-size: 6vw; border-top: 4px solid hotpink; border-bottom: 4px solid hotpink; padding: 2rem;">You.</div>
+</section>
+<!-- ✅ How It Works -->
+<section style="background: radial-gradient(circle at top left, #1a001a 0%, #000 80%);">
+  <h2 class="highlight" style="font-size: 4vw;">How It Works</h2>
+  <div class="card-grid">
+    <div class="card"><strong>01</strong> Call the number. Don’t think. Just dial.</div>
+    <div class="card"><strong>02</strong> Let it out. Scream. Cry. Whisper. No words required.</div>
+    <div class="card"><strong>03</strong> Hang up. Like nothing happened. Like everything changed.</div>
+    <div class="card"><strong>04</strong> Walk away lighter. No judgment. No echo.</div>
+    <div class="card"><strong>05</strong> Repeat when silence gets too loud.</div>
+  </div>
+</section>
+<!-- ✅ Is It a Joke -->
+<section style="background: radial-gradient(ellipse at center, #1a001a, #000); padding-top: 12vh;">
+  <h2 class="highlight" style="font-size: 5vw;">Is It a Joke?</h2>
+  <div class="animated-text">Yes. And no.</div>
+  <div class="animated-text">It’s satire. It’s therapy. It’s art.</div>
+  <div class="animated-text">It’s rebellion in disguise.</div>
+  <div class="animated-text">Not a punchline. A pressure valve.</div>
+  <div class="animated-text">The world wants your whisper. SCREAMLINE gives you the mic.</div>
+</section>
+<section style="background: linear-gradient(to bottom right, #0a0a0a, #1a001a);">
+  <div class="quote-mark">“</div>
+  <div class="animated-text">What if your soul didn’t need to be healed...</div>
+  <div class="animated-text">What if it just needed to be heard?</div>
+  <div class="quote-mark">”</div>
+</section>
+<!-- ✅ SCREAMLOG App -->
+<section style="background: linear-gradient(to bottom, #000, #1a001a);">
+  <h2 class="highlight" style="font-size: 5vw;">THE SCREAMLOG APP</h2>
+  <div style="font-size: 1.5vw; text-transform: uppercase; letter-spacing: 0.15em; color: #ff99cc; margin-bottom: 6vh;">Coming Soon</div>
+  <div class="card-grid">
+    <div class="card"><strong>📈</strong> Track Your Screams – Your emotional graph, visualized.</div>
+    <div class="card"><strong>🎖️</strong> Earn Sound Badges – Breakroom Breakdown. Existential Echo. Midnight Meltdown.</div>
+    <div class="card"><strong>💬</strong> Rewarded for Feeling – “You did amazing, sweetie.” “Would recommend to a friend.”</div>
+  </div>
+  <div class="app-preview">
+    <img src="https://via.placeholder.com/250x500/FF69B4/000000?text=SCREAMLOG+APP" alt="App Preview" />
+    <p style="font-size: 1.1vw; color: #ffb3d9; font-style: italic;">Preview the chaos. Beautifully broken.</p>
+  </div>
+</section>
+<!-- ✅ Final CTA -->
+<section style="background: linear-gradient(120deg, #0b0014, #1a001a);">
+  <div class="animated-text">You don’t always need to explain.<br>You don’t need to hold it together.<br>You don’t need to be strong today.</div>
+</section>
+<section style="background: radial-gradient(circle, #0f0012, #000);">
+  <div class="quote-mark">“</div>
+  <div class="animated-text">Sometimes, you just need to scream into the night,</div>
+  <div class="animated-text">Feel your breath bounce back,</div>
+  <div class="animated-text">and realize —</div>
+  <div class="animated-text">You're still here. You're real.</div>
+  <div class="quote-mark">”</div>
+</section>
+<section class="cta-final">
+  <a href="tel:123456Scream">CALL NOW → 123-456-SCREAM</a>
+  <div class="slogan">SCREAMLINE. It’s okay to lose it.</div>
+</section>
+
+</body>
+</html>
